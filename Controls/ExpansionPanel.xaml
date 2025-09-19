@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView
+    x:Class="YoTuViLo2.Controls.ExpansionPanel"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:YoTuViLo2.Controls"
+    x:Name="This"
+    x:DataType="controls:ExpansionPanel">
+    <VerticalStackLayout
+        x:Name="Layout"
+        x:DataType="controls:ExpansionPanel"
+        BindingContext="{x:Reference This}"
+        WidthRequest="{Binding WidthRequest}">
+        <Border
+            x:DataType="controls:ExpansionPanel"
+            BackgroundColor="{Binding HeaderBackgroundColor}"
+            BindingContext="{x:Reference This}"
+            HeightRequest="{Binding HeaderHeightRequest}"
+            VerticalOptions="Start">
+            <Border.StrokeShape>
+                <RoundRectangle
+                    x:DataType="controls:ExpansionPanel"
+                    BindingContext="{x:Reference This}"
+                    CornerRadius="{Binding PanelCornerRadius}" />
+            </Border.StrokeShape>
+            <Grid
+                ColumnDefinitions="*,auto"
+                RowDefinitions="auto"
+                VerticalOptions="Center">
+                <Label
+                    Grid.Column="0"
+                    Margin="10,0,0,0"
+                    x:DataType="controls:ExpansionPanel"
+                    BindingContext="{x:Reference This}"
+                    HorizontalOptions="Start"
+                    Text="{Binding HeaderTitle}"
+                    VerticalOptions="Center" />
+                <!--<ContentView Grid.Column="0"
+                             Content="{Binding HeaderContent}" />-->
+                <Image
+                    x:Name="ArrowIcon"
+                    Grid.Column="1"
+                    Margin="{Binding ArrowMargin}"
+                    x:DataType="controls:ExpansionPanel"
+                    BindingContext="{x:Reference This}"
+                    HeightRequest="{Binding ArrowHeightRequest}"
+                    Rotation="90"
+                    Source="{Binding ArrowSource}"
+                    VerticalOptions="Center"
+                    WidthRequest="{Binding ArrowWidthRequest}" />
+            </Grid>
+            <Border.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnHeadTapped" />
+            </Border.GestureRecognizers>
+        </Border>
+
+        <Border
+            x:Name="ContentContainer"
+            x:DataType="controls:ExpansionPanel"
+            AnchorY="0"
+            BackgroundColor="{Binding ContentBackgroundColor}"
+            BindingContext="{x:Reference This}"
+            HeightRequest="0"
+            MaximumHeightRequest="{Binding ContentHeightRequest}"
+            MinimumHeightRequest="0">
+            <Border.StrokeShape>
+                <RoundRectangle
+                    x:DataType="controls:ExpansionPanel"
+                    BindingContext="{x:Reference This}"
+                    CornerRadius="{Binding PanelCornerRadius}" />
+            </Border.StrokeShape>
+
+            <ContentView
+                x:Name="ContentHolder"
+                BindingContext="{Binding BindingContext, Source={x:Reference This}}"
+                Content="{Binding PanelContent, Source={x:Reference This}}"
+                HeightRequest="0"
+                MaximumHeightRequest="{Binding ContentHolderHeightRequest}"
+                MinimumHeightRequest="0"
+                VerticalOptions="Center" />
+        </Border>
+    </VerticalStackLayout>
+</ContentView>

@@ -1,0 +1,125 @@
+is_global = true
+build_property.TargetFramework = net9.0-windows10.0.19041.0
+build_property.TargetPlatformMinVersion = 10.0.17763.0
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 9A19103F-16F7-4668-BE54-9A1E7A4F7556
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = YoTuViLo2
+build_property.ProjectDir = D:\Coding projects\YoTuViLo2\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.CsWinRTAotOptimizerEnabled = true
+build_property.CsWinRTAotExportsEnabled = 
+build_property.CsWinRTRcwFactoryFallbackGeneratorForceOptIn = 
+build_property.CsWinRTRcwFactoryFallbackGeneratorForceOptOut = 
+build_property.CsWinRTCcwLookupTableGeneratorEnabled = true
+build_property.CsWinRTMergeReferencedActivationFactories = 
+build_property.CsWinRTAotWarningLevel = 
+build_property.CsWinRTUseWindowsUIXamlProjections = false
+build_property.EffectiveAnalysisLevelStyle = 9.0
+build_property.EnableCodeStyleSeverity = 
+
+[D:/Coding projects/YoTuViLo2/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = YoTuViLo2.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[D:/Coding projects/YoTuViLo2/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = YoTuViLo2.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[D:/Coding projects/YoTuViLo2/Controls/ExpansionPanel.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = YoTuViLo2.Controls.ExpansionPanel.xaml
+build_metadata.AdditionalFiles.TargetPath = Controls\ExpansionPanel.xaml
+build_metadata.AdditionalFiles.RelativePath = Controls\ExpansionPanel.xaml
+
+[D:/Coding projects/YoTuViLo2/Controls/TabPanel.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = YoTuViLo2.Controls.TabPanel.xaml
+build_metadata.AdditionalFiles.TargetPath = Controls\TabPanel.xaml
+build_metadata.AdditionalFiles.RelativePath = Controls\TabPanel.xaml
+
+[D:/Coding projects/YoTuViLo2/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = YoTuViLo2.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[D:/Coding projects/YoTuViLo2/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = YoTuViLo2.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[D:/Coding projects/YoTuViLo2/Views/ContentPage/DownloadPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = YoTuViLo2.Views.ContentPage.DownloadPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\ContentPage\DownloadPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\ContentPage\DownloadPage.xaml
+
+[D:/Coding projects/YoTuViLo2/Views/ContentPage/HelpPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = YoTuViLo2.Views.ContentPage.HelpPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\ContentPage\HelpPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\ContentPage\HelpPage.xaml
+
+[D:/Coding projects/YoTuViLo2/Views/ContentPage/SettingsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = YoTuViLo2.Views.ContentPage.SettingsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\ContentPage\SettingsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\ContentPage\SettingsPage.xaml
+
+[D:/Coding projects/YoTuViLo2/Views/ContentView/DownloadAuthorView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = YoTuViLo2.Views.ContentView.DownloadAuthorView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\ContentView\DownloadAuthorView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\ContentView\DownloadAuthorView.xaml
+
+[D:/Coding projects/YoTuViLo2/Views/ContentView/DownloadPlaylistView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = YoTuViLo2.Views.ContentView.DownloadPlaylistView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\ContentView\DownloadPlaylistView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\ContentView\DownloadPlaylistView.xaml
+
+[D:/Coding projects/YoTuViLo2/Views/ContentView/DownloadVideoView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = YoTuViLo2.Views.ContentView.DownloadVideoView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\ContentView\DownloadVideoView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\ContentView\DownloadVideoView.xaml
+
+[D:/Coding projects/YoTuViLo2/Views/ContentView/GeneralSettingsView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = YoTuViLo2.Views.ContentView.GeneralSettingsView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\ContentView\GeneralSettingsView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\ContentView\GeneralSettingsView.xaml
+
+[D:/Coding projects/YoTuViLo2/Views/ContentView/ToolsSettingsView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = YoTuViLo2.Views.ContentView.ToolsSettingsView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\ContentView\ToolsSettingsView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\ContentView\ToolsSettingsView.xaml
+
+[D:/Coding projects/YoTuViLo2/Tools/FFmpeg/doc/bootstrap.min.css]
+build_metadata.AdditionalFiles.GenKind = Css
+build_metadata.AdditionalFiles.ManifestResourceName = YoTuViLo2.Tools.FFmpeg.doc.bootstrap.min.css
+build_metadata.AdditionalFiles.TargetPath = Tools\FFmpeg\doc\bootstrap.min.css
+build_metadata.AdditionalFiles.RelativePath = Tools\FFmpeg\doc\bootstrap.min.css
+
+[D:/Coding projects/YoTuViLo2/Tools/FFmpeg/doc/default.css]
+build_metadata.AdditionalFiles.GenKind = Css
+build_metadata.AdditionalFiles.ManifestResourceName = YoTuViLo2.Tools.FFmpeg.doc.default.css
+build_metadata.AdditionalFiles.TargetPath = Tools\FFmpeg\doc\default.css
+build_metadata.AdditionalFiles.RelativePath = Tools\FFmpeg\doc\default.css
+
+[D:/Coding projects/YoTuViLo2/Tools/FFmpeg/doc/style.min.css]
+build_metadata.AdditionalFiles.GenKind = Css
+build_metadata.AdditionalFiles.ManifestResourceName = YoTuViLo2.Tools.FFmpeg.doc.style.min.css
+build_metadata.AdditionalFiles.TargetPath = Tools\FFmpeg\doc\style.min.css
+build_metadata.AdditionalFiles.RelativePath = Tools\FFmpeg\doc\style.min.css

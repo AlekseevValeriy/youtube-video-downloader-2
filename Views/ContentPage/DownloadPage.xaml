@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="YoTuViLo2.Views.DownloadPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:YoTuViLo2.Controls"
+    xmlns:vm="clr-namespace:YoTuViLo2.ViewModels"
+    x:DataType="vm:DownloadPageViewModel">
+    <ScrollView Orientation="Vertical">
+        <Grid RowDefinitions="auto,auto,*,auto">
+            <Grid
+                Grid.Row="0"
+                Margin="36"
+                ColumnSpacing="6"
+                RowDefinitions="auto,auto,*"
+                RowSpacing="10">
+                <Border Grid.Row="0" IsEnabled="{Binding IsDownloadDataWriteable}">
+                    <Grid
+                        Margin="12"
+                        ColumnDefinitions="auto,*"
+                        ColumnSpacing="36"
+                        RowDefinitions="auto,auto,auto,auto,auto,auto,auto"
+                        RowSpacing="10">
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            HorizontalTextAlignment="Start"
+                            Text="Source"
+                            VerticalTextAlignment="Center" />
+                        <Editor
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            AutoSize="TextChanges"
+                            HorizontalOptions="Start"
+                            MaximumHeightRequest="300"
+                            Placeholder="Link"
+                            Text="{Binding Source}"
+                            WidthRequest="400" />
+                        <Label
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            HorizontalTextAlignment="Start"
+                            Text="Format"
+                            VerticalTextAlignment="Center" />
+                        <HorizontalStackLayout
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            HorizontalOptions="Start"
+                            Spacing="18">
+                            <HorizontalStackLayout>
+                                <Label Text="Audio" VerticalOptions="Center" />
+                                <CheckBox IsChecked="{Binding AudioIsChecked}" />
+                            </HorizontalStackLayout>
+                            <HorizontalStackLayout>
+                                <Label Text="Video" VerticalOptions="Center" />
+                                <CheckBox IsChecked="{Binding VideoIsChecked}" />
+                            </HorizontalStackLayout>
+                        </HorizontalStackLayout>
+                        <!--<Picker
+                            ItemsSource="{Binding DownloadFormats}"
+                            SelectedItem="{Binding Format}"
+                            WidthRequest="150" />-->
+                        <Label
+                            Grid.Row="2"
+                            Grid.Column="0"
+                            HorizontalTextAlignment="Start"
+                            Text="Scope"
+                            VerticalTextAlignment="Center" />
+                        <Picker
+                            Grid.Row="2"
+                            Grid.Column="1"
+                            HorizontalOptions="Start"
+                            ItemsSource="{Binding DownloadScopes}"
+                            SelectedItem="{Binding Scope}"
+                            WidthRequest="150" />
+                        <Label
+                            Grid.Row="3"
+                            Grid.Column="0"
+                            HorizontalTextAlignment="Start"
+                            Text="Path"
+                            VerticalTextAlignment="Center" />
+                        <HorizontalStackLayout
+                            Grid.Row="3"
+                            Grid.Column="1"
+                            Spacing="8">
+                            <Entry
+                                HorizontalOptions="Start"
+                                Placeholder="Path"
+                                Text="{Binding DownloadPath}"
+                                WidthRequest="400" />
+                            <Button Command="{Binding SetDownloadPathCommand}" Text="Set" />
+                        </HorizontalStackLayout>
+                        <Label
+                            Grid.Row="4"
+                            Grid.Column="0"
+                            HorizontalTextAlignment="Start"
+                            Text="Audio extract"
+                            VerticalTextAlignment="Center" />
+                        <CheckBox
+                            Grid.Row="4"
+                            Grid.Column="1"
+                            HorizontalOptions="Start"
+                            IsChecked="{Binding IsAudioExtract}"
+                            VerticalOptions="Center" />
+                        <Label
+                            Grid.Row="5"
+                            Grid.Column="0"
+                            HorizontalTextAlignment="Start"
+                            Text="Only music"
+                            VerticalTextAlignment="Center" />
+                        <CheckBox
+                            Grid.Row="5"
+                            Grid.Column="1"
+                            HorizontalOptions="Start"
+                            IsChecked="{Binding IsOnlyMusic}"
+                            VerticalOptions="Center" />
+                        <Label
+                            Grid.Row="6"
+                            Grid.Column="0"
+                            HorizontalTextAlignment="Start"
+                            Text="With metadata"
+                            VerticalTextAlignment="Center" />
+                        <CheckBox
+                            Grid.Row="6"
+                            Grid.Column="1"
+                            HorizontalOptions="Start"
+                            IsChecked="{Binding WithMetadata}"
+                            VerticalOptions="Center" />
+                    </Grid>
+                </Border>
+                <Border Grid.Row="1" VerticalOptions="Start">
+                    <Grid
+                        Margin="12"
+                        RowDefinitions="auto,auto,auto,auto,auto,auto"
+                        RowSpacing="10">
+                        <HorizontalStackLayout Grid.Row="0" Spacing="12">
+                            <Label Text="Playlist target:" />
+                            <Label Text="{Binding CurrentPlaylistDownloadTarget}" />
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout Grid.Row="1" Spacing="12">
+                            <Label Text="Video target:" />
+                            <Label Text="{Binding CurrentVideoDownloadTarget}" />
+                        </HorizontalStackLayout>
+                        <Label
+                            Grid.Row="2"
+                            HorizontalOptions="Start"
+                            Text="{Binding AllBarProgressText}" />
+                        <ProgressBar
+                            Grid.Row="3"
+                            Margin="0,6,0,6"
+                            Progress="{Binding AllBarProgress}" />
+                        <Label
+                            Grid.Row="4"
+                            HorizontalOptions="Start"
+                            Text="{Binding EachBarProgressText}" />
+                        <ProgressBar
+                            Grid.Row="5"
+                            Margin="0,6,0,6"
+                            Progress="{Binding EachBarProgress}" />
+                    </Grid>
+                </Border>
+                <controls:ExpansionPanel
+                    Grid.Row="2"
+                    HeaderHeightRequest="30"
+                    HeaderTitle="Debug">
+                    <controls:ExpansionPanel.PanelContent>
+                        <Grid Margin="6">
+                            <Editor
+                                CursorPosition="{Binding}"
+                                HeightRequest="200"
+                                Text="{Binding DebugOutput}" />
+
+                        </Grid>
+                    </controls:ExpansionPanel.PanelContent>
+                </controls:ExpansionPanel>
+            </Grid>
+            <Grid
+                Grid.Row="3"
+                Margin="36"
+                ColumnDefinitions="auto,*"
+                ColumnSpacing="6">
+                <Button
+                    Grid.Column="0"
+                    Command="{Binding StartDownloadCommand}"
+                    IsEnabled="{Binding IsDownloadDataWriteable}"
+                    Text="Start"
+                    WidthRequest="80" />
+                <Border
+                    Grid.Column="1"
+                    HorizontalOptions="Start"
+                    WidthRequest="250">
+                    <HorizontalStackLayout
+                        Margin="6"
+                        Spacing="10"
+                        VerticalOptions="Center">
+                        <Label Text="Status:" />
+                        <Label Text="{Binding GeneralStatus}" />
+                    </HorizontalStackLayout>
+                </Border>
+            </Grid>
+        </Grid>
+    </ScrollView>
+
+</ContentPage>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView
+    x:Class="YoTuViLo2.Controls.TabPanel"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:YoTuViLo2.Controls"
+    x:Name="This"
+    x:DataType="controls:TabPanel">
+    <Grid
+        x:DataType="controls:TabPanel"
+        BindingContext="{x:Reference This}"
+        RowDefinitions="auto,*"
+        RowSpacing="{Binding Spacing}">
+        <ContentView
+            Grid.Row="0"
+            x:DataType="controls:TabPanel"
+            BindingContext="{x:Reference This}"
+            Content="{Binding TabsContent}" />
+        <ContentView
+            Grid.Row="1"
+            x:DataType="controls:TabPanel"
+            BindingContext="{x:Reference This}"
+            Content="{Binding PageContent}" />
+    </Grid>
+</ContentView>
